@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid-19</title>
+
+
+<style>
+.form{
+    width: 445px;
+    height: 525px;
+    margin: auto;
+
+}
+
+.dados{
+   background-color: aquamarine;
+   border: 2px solid #6a6a6a; 
+   border-radius: 10px; 
+}
+
+.titulo {
+    width: auto;
+    background-color: yellow;
+    border: 2px solid #e6e20d;
+    border-radius: 10px;
+}
+.btn-default {
+    font-size: 25px;
+}
+
+.labels{
+    font-size: 25px;
+}
+
+.labels1{
+
+    color: red;
+}
+
+.labels2{
+
+    color: black;
+}
+
+.labels3{
+
+    color: blue;
+}
+
+.labels4{
+
+    color: green;
+}
+
+@media screen and (max-width: 768px)
+ {
+    .form {
+        width: 100%;
+        height: 525px;
+    }
+}
+</style>
+
+</head>
+<body>
+    <div style="text-align: center;">
+        
+
+      <form class="form" method="POST" action="/" >
+        
+ 
+        <div class="titulo">
+        <h2 style="color: black;"><img style="max-width: 25px; 
+    max-height: 25px;" src="../static/Flag_of_Brasil.png">&nbsp;&nbsp;&nbsp;COVID-19&nbsp;&nbsp;&nbsp;<img style="max-width: 25px; 
+    max-height: 25px;" src="../static/Flag_of_Brasil.png"></h2>
+        </div>
+
+        <div class="dados">
+            <br> 
+        <label>Mostrando dados do estado: {{dados.state}} - {{dados.uf}}</label> <br> <br>
+        </div>
+
+        <div class="dados">
+            <br>
+        <label>Infectados: </label> <label class="labels labels1">{{dados.cases}}</label> <br> <br>
+        </div>
+
+        <div class="dados">
+            <br>
+        <label>Mortos: </label> <label class="labels labels2">{{dados.deaths}}</label> <br> <br>
+        </div>
+        
+        <div class="dados">
+            <br>
+        <label>Suspeitos: </label> <label class="labels labels3">{{dados.suspects}}</label> <br> <br>
+        </div>
+
+        <div class="dados">
+            <br>
+        <label>Descartados: </label> <label class="labels labels4">{{dados.refuses}}</label> <br> <br>
+        </div>
+        
+        <div class="dados">
+            <br>
+        <label>Data: </label> <label class="labels">{{dados.datetime}}</label> <br> <br>
+        </div>
+        
+        
+        <div class="dados" style="height: 65px;"> <br>
+        <span class="input-group-addon">Selecione o Estado</span>
+        <select class="btn-default" name="comp_select" id=estado>
+            <option value="" ></option>
+            <option value="SP" >SP</option>
+            <option value="MG" >MG</option>
+            <option value="RS" >RS</option>
+            <option value="PR" >PR</option>
+            <option value="RJ" >RJ</option>
+            <option value="SC" >SC</option>
+            <option value="GO" >GO</option>
+            <option value="BA" >BA</option>
+            <option value="CE" >CE</option>
+            <option value="ES" >ES</option>
+            <option value="PE" >PE</option>
+            <option value="DF" >DF</option>
+            <option value="MT" >MT</option>
+            <option value="PA" >PA</option>
+            <option value="PB" >PB</option>
+            <option value="AM" >AM</option>
+            <option value="MS" >MS</option>
+            <option value="RN" >RN</option>
+            <option value="MA" >MA</option>
+            <option value="RO" >RO</option>
+            <option value="PI" >PI</option>
+            <option value="TO" >TO</option>
+            <option value="SE" >SE</option>
+            <option value="AL" >AL</option>
+            <option value="AP" >AP</option>
+            <option value="RR" >RR</option>
+            <option value="AC" >AC</option>
+        </select>
+        <button type="submit" class="btn-default">Ver</button>
+        </div>
+
+      </form>
+    </div>
+
+</body>
+</html> 
